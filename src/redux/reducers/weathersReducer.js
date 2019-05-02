@@ -23,14 +23,14 @@ export default function weathersReducer(state = initialState, action) {
       return {
         ...state,
         weathersLoading: false,
-        weathers: action.restaurants
+        weathers: action.weathers
       };
 
     case FETCH_WEATHERS_FAILED:
       return {
         ...state,
         weathersLoading: false,
-        weathersError: action.restaurantsError,
+        weathersError: action.weathersError,
         weathers: []
       };
 

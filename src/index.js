@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import WebFont from "webfontloader";
-import Header from "../src/components/atoms/Header";
+import { Provider } from "react-redux";
+import App from "./components/App";
+import store from "./redux/store";
+
 import "./style.scss";
 
 WebFont.load({
@@ -10,12 +13,9 @@ WebFont.load({
   }
 });
 
-function App() {
-  return (
-    <div className="main-container">
-      <Header>SnapHunt Weathers</Header>
-    </div>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
