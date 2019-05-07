@@ -1,5 +1,5 @@
 import React from "react";
-import WeatherCard from "../../molecules/WeatherCard/index.jsx";
+import WeatherCard from "../../molecules/WeatherCard";
 import Carousel from "nuka-carousel";
 import "./style.scss";
 
