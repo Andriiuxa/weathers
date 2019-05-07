@@ -1,7 +1,11 @@
 @import "../styles/colors.scss";
 
 .main-container {
-  background-color: $light-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $color-light-grey;
 
   position: fixed;
   padding: 0;

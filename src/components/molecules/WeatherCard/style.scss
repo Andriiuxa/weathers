@@ -1,0 +1,122 @@
+@import "../../../styles/colors.scss";
+
+.weather-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.weather-card-header {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1em;
+}
+
+.weather-card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: auto;
+}
+
+.weather-card-temperature {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4em;
+  padding: 0.7em;
+  border-bottom: 1px solid $color-white;
+
+  .temperature {
+    display: flex;
+    font-size: 2.5em;
+    color: $color-very-light-grey;
+  }
+
+  .location-and-summary {
+    padding-left: 0.3em;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  .temperature-celsius,
+  .summary,
+  .location,
+  .date {
+    color: $color-white;
+  }
+
+  .temperature,
+  .summary,
+  .location,
+  .date {
+    font-weight: 200;
+  }
+
+  .summary {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .location {
+    font-size: 12px;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid $color-light-grey;
+    margin: 1em;
+    padding: 0.7em 1em;
+  }
+
+  .date-day {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 0.5em;
+  }
+
+  .date-month {
+    font-weight: 500;
+  }
+}
+
+.blue {
+  background-color: $color-light-blue;
+}
+
+.green {
+  background-color: $color-green;
+}
+
+.red {
+  background-color: $color-red;
+}
+
+.weather-card-additional-details {
+  display: flex;
+  padding: 1em 3em;
+  background-color: $color-dark-grey;
+  width: 100%;
+  height: 5em;
+
+  .detail {
+    display: flex;
+    height: 1.4em;
+    margin-right: 1em;
+    margin-top: 1em;
+  }
+
+  .detail-text {
+    color: $color-white;
+    font-size: 10px;
+    margin: 0.5em 1em;
+  }
+}

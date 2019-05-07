@@ -18,9 +18,7 @@ export const fetchWeathersAction = () => dispatch => {
   let requests = coordinatesToFetch.map(
     coordinate =>
       fetch(
-        `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
-        8b694087caf5c02ca2789c8059f27f91
-      /${coordinate}?exclude=minutely,hourly,flags,daily,alerts`
+        `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/8b694087caf5c02ca2789c8059f27f91/${coordinate}?units=si&exclude=minutely,hourly,flags,daily,alerts`
       )
     //Yes, i know, there is an API key in the URL, normally it should be assigned to an environmental variable, for I did not bother setting up that for the sake of this demo.
   );

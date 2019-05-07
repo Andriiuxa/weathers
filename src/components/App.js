@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "./atoms/Header";
+import WeatherCards from "./organisms/WeatherCards";
 import { fetchWeathersAction } from "../redux/actions/weathersActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -13,19 +14,20 @@ class App extends Component {
   }
 
   render() {
-    const { error, loading, weathers } = this.props;
+    const { error, loading, weathers, fetchWeathers } = this.props;
 
     if (error) {
       return <div>Error! {error.message}</div>;
     }
 
-    if (loading || !weathers) {
-      return <div>Loading...</div>;
+    if (loading || weathers.length === 0) {
+      return <div>We are loading your weathers, one sec :)</div>;
     }
 
     return (
       <div className="main-container">
         <Header>SnapHunt Weathers</Header>
+        <WeatherCards weathers={weathers} fetchWeathers={fetchWeathers} />
       </div>
     );
   }
